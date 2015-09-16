@@ -30,7 +30,7 @@ class CatMonitor
 	}
 
 	private function ajaxCat() {
-		$statusCat = @file_get_contents($this->catConfig->statusCatFile, false, null, -1, 256);
+		$statusCat = trim(@file_get_contents($this->catConfig->statusCatFile, false, null, -1, 256));
 
 		header('Content-type: application/json');
 
